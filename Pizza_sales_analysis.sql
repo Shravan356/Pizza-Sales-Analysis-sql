@@ -16,6 +16,7 @@ CREATE TABLE order_details (
     PRIMARY KEY (order_details_id)
 );
 
+## Basic KPI
 -- 1. Retrieve the total number of orders placed.
 SELECT 
     COUNT(order_id) AS Total_Orders
@@ -64,6 +65,7 @@ GROUP BY pizza_types.name
 ORDER BY Total_Quantity DESC
 LIMIT 5;
 
+## Intermediate KPI
 -- 1.Join the necessary tables to find the total quantity of each pizza category ordered.
 SELECT 
     pizza_types.category,
@@ -117,6 +119,7 @@ GROUP BY name
 ORDER BY Total_Revenue DESC
 LIMIT 3;
 
+## Advance
 -- 1.Calculate the percentage contribution of each pizza type to total revenue.
 SELECT 
     category,
